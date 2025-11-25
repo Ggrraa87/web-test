@@ -1,0 +1,28 @@
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#171717;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="redGlow">
+      <stop offset="0%" style="stop-color:#E60606;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Светящиеся круги -->
+  <circle cx="300" cy="200" r="150" fill="url(#redGlow)"/>
+  <circle cx="1600" cy="800" r="200" fill="url(#redGlow)"/>
+  <circle cx="800" cy="600" r="100" fill="url(#redGlow)" opacity="0.5"/>
+
+  <!-- Сетка -->
+  <g opacity="0.1">
+    <line x1="0" y1="360" x2="1920" y2="360" stroke="#E60606" stroke-width="1"/>
+    <line x1="0" y1="720" x2="1920" y2="720" stroke="#E60606" stroke-width="1"/>
+    <line x1="640" y1="0" x2="640" y2="1080" stroke="#E60606" stroke-width="1"/>
+    <line x1="1280" y1="0" x2="1280" y2="1080" stroke="#E60606" stroke-width="1"/>
+  </g>
+</svg>

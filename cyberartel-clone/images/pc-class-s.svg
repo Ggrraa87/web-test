@@ -1,0 +1,28 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF0000;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#E60606;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="#000000"/>
+  <g transform="translate(200, 200)">
+    <!-- Корпус ПК премиум -->
+    <rect x="-70" y="-110" width="140" height="200" fill="#171717" stroke="url(#glowGrad)" stroke-width="4" rx="15"/>
+    <!-- RGB подсветка -->
+    <rect x="-60" y="-100" width="10" height="180" fill="#FF0000" opacity="0.6"/>
+    <rect x="50" y="-100" width="10" height="180" fill="#E60606" opacity="0.6"/>
+    <!-- Стеклянная панель -->
+    <rect x="-50" y="-100" width="100" height="180" fill="#FFFFFF" opacity="0.05"/>
+    <!-- Вентиляторы -->
+    <circle cx="-25" cy="-60" r="20" fill="none" stroke="#E60606" stroke-width="3"/>
+    <circle cx="25" cy="-60" r="20" fill="none" stroke="#E60606" stroke-width="3"/>
+    <circle cx="-25" cy="0" r="20" fill="none" stroke="#FF0000" stroke-width="3"/>
+    <circle cx="25" cy="0" r="20" fill="none" stroke="#FF0000" stroke-width="3"/>
+    <!-- Кнопка питания -->
+    <circle cx="0" cy="60" r="10" fill="#FF0000">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="0" y="130" text-anchor="middle" font-family="Arial" font-size="28" font-weight="bold" fill="#FF0000">S-CLASS</text>
+  </g>
+</svg>
