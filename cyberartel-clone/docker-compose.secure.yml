@@ -1,0 +1,68 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: itsales-website
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+
+    # ========== БЕЗОПАСНОСТЬ ==========
+
+    # Ограничение ресурсов (защита от DoS)
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'          # Максимум 50% CPU
+          memory: 512M         # Максимум 512MB RAM
+        reservations:
+          cpus: '0.25'         # Резерв 25% CPU
+          memory: 256M         # Резерв 256MB RAM
+
+    # Опции безопасности
+    security_opt:
+      - no-new-privileges:true   # Запрет повышения привилегий
+      - apparmor:docker-default  # AppArmor профиль
+
+    # Read-only файловая система (кроме необходимых папок)
+    read_only: true
+    tmpfs:
+      - /tmp:mode=1777,size=100M
+      - /var/run:mode=755,size=10M
+      - /var/cache/nginx:mode=755,size=50M
+
+    # Переменные окружения (безопасные значения)
+    environment:
+      - NGINX_ENTRYPOINT_QUIET_LOGS=1
+
+    # Healthcheck (проверка работоспособности)
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+    # Логирование
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+    networks:
+      - itsales-network
+
+networks:
+  itsales-network:
+    driver: bridge
+    # Изолированная сеть с собственной подсетью
+    ipam:
+      config:
+        - subnet: 172.28.0.0/16
+    driver_opts:
+      com.docker.network.bridge.name: br-itsales
+      com.docker.network.bridge.enable_icc: "false"  # Отключаем inter-container communication

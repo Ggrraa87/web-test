@@ -1,0 +1,50 @@
+# Конфиденциальные файлы
+.env
+.env.local
+.env.production
+*.key
+*.pem
+*.crt
+*.p12
+secrets/
+credentials/
+
+# SSL сертификаты
+ssl/
+certs/
+
+# Логи
+*.log
+logs/
+*.log.*
+
+# Временные файлы
+*.tmp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Node modules (если добавите)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# IDE
+.idea/
+.vscode/
+*.sublime-*
+
+# Docker
+.dockerignore
+
+# Резервные копии
+*.backup
+*.bak
+backup/
+
+# Database (если добавите)
+*.sql
+*.sqlite
+*.db
