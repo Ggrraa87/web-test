@@ -1,6 +1,6 @@
-# CYBER ARTEL - Клон сайта
+# IT SALES - Клон сайта
 
-Полная копия сайта cyberartel.ru с Docker инфраструктурой для быстрого развертывания.
+Полная копия сайта itsales.ru с Docker инфраструктурой для быстрого развертывания.
 
 ## 🚀 Особенности
 
@@ -42,7 +42,7 @@ sudo systemctl enable docker
 
 1. **Перейдите в директорию проекта:**
 ```bash
-cd cyberartel-clone
+cd itsales-clone
 ```
 
 2. **Запустите контейнер:**
@@ -59,13 +59,13 @@ http://localhost:8080
 
 1. **Соберите Docker образ:**
 ```bash
-cd cyberartel-clone
-docker build -t cyberartel-website .
+cd itsales-clone
+docker build -t itsales-website .
 ```
 
 2. **Запустите контейнер:**
 ```bash
-docker run -d -p 8080:80 --name cyberartel cyberartel-website
+docker run -d -p 8080:80 --name itsales itsales-website
 ```
 
 3. **Откройте браузер и перейдите на:**
@@ -81,7 +81,7 @@ http://localhost:8080
 docker-compose down
 
 # С Docker напрямую
-docker stop cyberartel
+docker stop itsales
 ```
 
 ### Перезапуск контейнера:
@@ -90,7 +90,7 @@ docker stop cyberartel
 docker-compose restart
 
 # С Docker напрямую
-docker restart cyberartel
+docker restart itsales
 ```
 
 ### Просмотр логов:
@@ -99,7 +99,7 @@ docker restart cyberartel
 docker-compose logs -f
 
 # С Docker напрямую
-docker logs -f cyberartel
+docker logs -f itsales
 ```
 
 ### Удаление контейнера:
@@ -108,15 +108,15 @@ docker logs -f cyberartel
 docker-compose down -v
 
 # С Docker напрямую
-docker stop cyberartel
-docker rm cyberartel
-docker rmi cyberartel-website
+docker stop itsales
+docker rm itsales
+docker rmi itsales-website
 ```
 
 ## 📁 Структура проекта
 
 ```
-cyberartel-clone/
+itsales-clone/
 ├── html/
 │   └── index.html          # Главная страница
 ├── css/
@@ -210,7 +210,7 @@ docker-compose up -d --build
 
 ## 📝 Лицензия
 
-Этот проект создан в образовательных целях как клон сайта cyberartel.ru.
+Этот проект создан в образовательных целях как клон сайта itsales.ru.
 
 ## 👨‍💻 Автор
 
@@ -220,7 +220,7 @@ docker-compose up -d --build
 
 - [Документация Docker](https://docs.docker.com/)
 - [Документация Nginx](https://nginx.org/ru/docs/)
-- [Оригинальный сайт](https://cyberartel.ru/)
+- [Оригинальный сайт](https://itsales.ru/)
 
 ---
 

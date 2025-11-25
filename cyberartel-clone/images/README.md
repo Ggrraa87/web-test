@@ -1,4 +1,4 @@
-# Папка для изображений CYBER ARTEL
+# Папка для изображений IT SALES
 
 ## 📁 Структура изображений
 
@@ -110,7 +110,7 @@ pc-s-class-1.jpg
 
 1. Скачайте нужные изображения
 2. Переименуйте их согласно структуре выше
-3. Поместите в папку `cyberartel-clone/images/`
+3. Поместите в папку `itsales-clone/images/`
 4. Пересоберите Docker образ:
    ```bash
    docker-compose down
@@ -127,7 +127,7 @@ pc-s-class-1.jpg
 
 ## ✅ Готовые файлы в этой папке
 
-- ✅ `logo.svg` - Логотип CYBER ARTEL
+- ✅ `logo.svg` - Логотип IT SALES
 - ✅ `pc-class-b.svg` - Заглушка для B-Class
 - ✅ `pc-class-s.svg` - Заглушка для S-Class
 - ✅ `hero-bg.svg` - Фон для главного экрана

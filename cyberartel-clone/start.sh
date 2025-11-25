@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# CYBER ARTEL - Скрипт запуска
+# IT SALES - Скрипт запуска
 # Автоматический запуск сайта в Docker
 
-echo "🚀 CYBER ARTEL - Запуск сайта..."
+echo "🚀 IT SALES - Запуск сайта..."
 echo ""
 
 # Проверка наличия Docker

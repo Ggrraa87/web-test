@@ -5,13 +5,13 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: cyberartel-website
+    container_name: itsales-website
     ports:
       - "8080:80"
     restart: unless-stopped
     networks:
-      - cyberartel-network
+      - itsales-network
 
 networks:
-  cyberartel-network:
+  itsales-network:
     driver: bridge

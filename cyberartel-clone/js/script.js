@@ -221,6 +221,6 @@ if (ratingSection) {
 }
 
 // Log initialization
-console.log('CYBER ARTEL website initialized');
+console.log('IT SALES website initialized');
 console.log('Theme: Dark Mode');
 console.log('Animations: Active');

@@ -6,10 +6,10 @@
     </linearGradient>
   </defs>
   <text x="10" y="40" font-family="Arial, sans-serif" font-size="32" font-weight="900" fill="#FFFFFF">
-    CYBER
+    IT
   </text>
-  <text x="130" y="40" font-family="Arial, sans-serif" font-size="32" font-weight="900" fill="url(#redGrad)">
-    ARTEL
+  <text x="70" y="40" font-family="Arial, sans-serif" font-size="32" font-weight="900" fill="url(#redGrad)">
+    SALES
   </text>
   <rect x="0" y="50" width="200" height="3" fill="url(#redGrad)"/>
 </svg>
